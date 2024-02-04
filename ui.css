@@ -1,0 +1,95 @@
+:root {
+  --basic-space: 8px;
+  --primary-color: #3d56cb;
+  --clicked-color: #929dd1;
+  --text-color: #858593;
+  --black-color: #0f1022;
+  --divide-color:#f1f0f7;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 1024px;
+  height: 768px;
+  font-family: "Roboto";
+}
+
+.card {
+  width: 280px;
+  height: 609px;
+}
+
+.card .picture{
+  width: 100%;
+  height: 280px;
+  border: solid 1px var(--black-color);
+}
+
+.card .body {
+  width: 100%;
+  height: 265px;
+  padding: calc(var(--basic-space) * 2);
+  overflow-x: scroll;
+  border: solid 1px var(--black-color);
+}
+
+.card .body::-webkit-scrollbar{
+  display: none;
+}
+
+.card .body .divide{
+  border: solid 1px var(--divide-color);
+  margin: var(--basic-space) 0;
+}
+
+.card .body .picture-title{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card .body .picture-title .main-title{
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: calc(var(--basic-space));
+}
+
+.card .body .picture-title .sub-title{
+  font-size: 12px;
+  color: var(--text-color);
+  margin-bottom: calc(var(--basic-space));
+}
+
+.card .body .picture-title .rank{
+  font-size: 14px !important;
+}
+
+.card .body .device{
+  width: 100%;
+  height: 59px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.card .body .device .icon-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.card .body .device .icon-group i{
+  font-size: 20px;
+}
+
+.card .body .description{
+  width: 100%;
+  height: 74px;
+}
